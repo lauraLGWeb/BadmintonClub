@@ -88,22 +88,18 @@ MySQL: Version 8.0 or higher (via MAMP or standalone)
 MongoDB: Version 6.0 or higher
 Node.js & NPM: For potential frontend dependencies
 MAMP/WAMP/XAMPP: Local development server (optional but recommended)
+
 🚀 Installation
-1. Clone the repository
-bash
-git clone https://github.com/your-username/blois-badminton-club.git
-cd blois-badminton-club`
-2. Install PHP dependencies
-composer install
-3. Configure environment variables
+1️⃣ Clone the repository
+bashgit clone https://github.com/lauraLGWeb/blois-badminton-club.git
+cd blois-badminton-club
+2️⃣ Install PHP dependencies
+bashcomposer install
+3️⃣ Configure environment variables
 Copy the .env file and configure your database credentials:
-
-
-cp .env .env.local
+bashcp .env .env.local
 Edit .env.local and update the following variables:
-
-
-# MySQL Configuration
+env# MySQL Configuration
 DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/blois_badminton?serverVersion=8.0"
 
 # MongoDB Configuration
@@ -115,9 +111,9 @@ MAILER_DSN=smtp://localhost
 
 # Payment Gateway Configuration (to be configured)
 PAYMENT_API_KEY=your_payment_api_key
-
-4. Create the databases
-# Create MySQL database
+💡 Tip for MAMP users: The MySQL port is often 8889 instead of 3306. Check your MAMP preferences!
+4️⃣ Create the databases
+bash# Create MySQL database
 php bin/console doctrine:database:create
 
 # Run migrations
@@ -125,18 +121,17 @@ php bin/console doctrine:migrations:migrate
 
 # Load fixtures (optional - for test data)
 php bin/console doctrine:fixtures:load
-For MongoDB, ensure your MongoDB service is running.
-
-5. Start the development server
-symfony server:start
+⚠️ Important: Ensure your MongoDB service is running before proceeding.
+5️⃣ Start the development server
+Using Symfony CLI (recommended):
+bashsymfony server:start
 Or using PHP's built-in server:
+bashphp -S localhost:8000 -t public/
+✅ The application should now be accessible at http://localhost:8000
 
-
-php -S localhost:8000 -t public/
-The application should now be accessible at http://localhost:8000
 
 🗄️ Database Configuration
-SQL Database (MySQL)
+💾 SQL Database (MySQL)
 The relational database handles:
 
 User accounts and authentication
@@ -145,44 +140,33 @@ Training sessions and registrations
 Products and inventory
 Orders and transactions
 Partners and sponsors
-NoSQL Database (MongoDB)
+
+📊 NoSQL Database (MongoDB)
 The NoSQL database handles:
 
 News posts and announcements
 Social media feed integration
 Real-time event updates
+
+
 👥 User Roles
 The application implements four distinct user roles with specific permissions:
-
-Role	Description	Access Level
-* Visitor	Non-authenticated user	View public pages, contact form, registration links
-* Member : Visitor access +	Authenticated club member	Shop access, and view schedules
-* Trainer	: Member access + training session schedules and participant lists
-* Admin	Administrator	Full access - manage users, sessions, products, registrations and adtuality
-  
-Role Hierarchy
-Admin
-  ↓
-Coach
-  ↓
-Member
-  ↓
-Visitor
-
+RoleDescriptionAccess Level👤 VisitorNon-authenticated userView public pages, contact form, registration links🏅 MemberAuthenticated club memberVisitor access + shop access and training schedules👨‍🏫 TrainerClub trainerMember access + session schedules and participant lists with email contact👑 AdminAdministratorFull access - manage users, sessions, products, registrations, and news
+📊 Role Hierarchy
+        👑 Admin
+           ↓
+      👨‍🏫 Trainer
+           ↓
+       🏅 Member
+           ↓
+       👤 Visitor
 
 🎓 Professional Skills Validated
 This project validates the following 8 professional competencies (UC) required for the Web and Mobile Web Application Developer certification:
-
-Activity Type 1: Develop the front-end of a secure web or mobile web application
-CP1: Install and configure the work environment according to the web or mobile web project
-CP2: Create mockups for web or mobile web user interfaces
-CP3: Develop static web or mobile web user interfaces
-CP4: Develop the dynamic part of web or mobile web user interfaces
-Activity Type 2: Develop the back-end of a secure web or mobile web application
-CP5: Set up a relational database (MySQL)
-CP6: Develop data access components for SQL and NoSQL (MySQL + MongoDB)
-CP7: Develop server-side business components (Symfony services)
-CP8: Document the deployment of a dynamic web or mobile web application
+📱 Activity Type 1: Develop the front-end of a secure web or mobile web application
+CPCompetencyCP1Install and configure the work environment according to the web or mobile web projectCP2Create mockups for web or mobile web user interfacesCP3Develop static web or mobile web user interfacesCP4Develop the dynamic part of web or mobile web user interfaces
+⚙️ Activity Type 2: Develop the back-end of a secure web or mobile web application
+CPCompetencyCP5Set up a relational database (MySQL)CP6Develop data access components for SQL and NoSQL (MySQL + MongoDB)CP7Develop server-side business components (Symfony services)CP8Document the deployment of a dynamic web or mobile web application
 
 🗓️ Roadmap
 Phase 1: Design & Planning ✅
@@ -211,8 +195,8 @@ Phase 3: Testing & Deployment
  Documentation completion
  Deployment preparation
  
-Target completion: End of January 2025
-Final submission: End of February 2025
+🎯 Target completion: End of January 2026
+📅 Final submission: End of February 2026
 
 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -220,11 +204,18 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 📧 Contact
 Project developed by: Laura Le Gall
 
-GitHub: lauraLGWeb
-LinkedIn: https://www.linkedin.com/in/laura-le-gall-web-dev/
-Training Program: Web and Mobile Web Application Developer
-Institution: ECOLE EUROPENNE DU NUMERIQUE 
-Project Type: Final Graduation Project
+🐙 GitHub: @lauraLGWeb
+💼 LinkedIn: Laura Le Gall - Web Developer
 
+🎓 Training Program: Web and Mobile Web Application Developer
+🏫 Institution: École Européenne du Numérique
+📚 Project Type: Final Graduation Project
+
+<div align="center">
 This project is part of a professional certification training program and demonstrates competencies in full-stack web development, database management, and secure application architecture.
+
+Made with ❤️ and Symfony
+
+</div>
+
 
