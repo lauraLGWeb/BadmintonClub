@@ -92,18 +92,17 @@ MAMP/WAMP/XAMPP: Local development server (optional but recommended)
 1. Clone the repository
 bash
 git clone https://github.com/your-username/blois-badminton-club.git
-cd blois-badminton-club
+cd blois-badminton-club`
 2. Install PHP dependencies
-bash
 composer install
 3. Configure environment variables
 Copy the .env file and configure your database credentials:
 
-bash
+
 cp .env .env.local
 Edit .env.local and update the following variables:
 
-env
+
 # MySQL Configuration
 DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/blois_badminton?serverVersion=8.0"
 
@@ -116,8 +115,8 @@ MAILER_DSN=smtp://localhost
 
 # Payment Gateway Configuration (to be configured)
 PAYMENT_API_KEY=your_payment_api_key
+
 4. Create the databases
-bash
 # Create MySQL database
 php bin/console doctrine:database:create
 
@@ -129,11 +128,10 @@ php bin/console doctrine:fixtures:load
 For MongoDB, ensure your MongoDB service is running.
 
 5. Start the development server
-bash
 symfony server:start
 Or using PHP's built-in server:
 
-bash
+
 php -S localhost:8000 -t public/
 The application should now be accessible at http://localhost:8000
 
@@ -157,10 +155,11 @@ Real-time event updates
 The application implements four distinct user roles with specific permissions:
 
 Role	Description	Access Level
-Visitor	Non-authenticated user	View public pages, contact form, registration links
-Member	Authenticated club member	Shop access, profile management, view schedules
-Coach	Club coach/trainer	Member access + training session schedules and participant lists
-Admin	Administrator	Full access - manage users, sessions, products, registrations
+* Visitor	Non-authenticated user	View public pages, contact form, registration links
+* Member : Visitor access +	Authenticated club member	Shop access, and view schedules
+* Trainer	: Member access + training session schedules and participant lists
+* Admin	Administrator	Full access - manage users, sessions, products, registrations and adtuality
+  
 Role Hierarchy
 Admin
   ↓
@@ -169,25 +168,8 @@ Coach
 Member
   ↓
 Visitor
-📁 Project Structure
-blois-badminton-club/
-├── config/              # Configuration files
-├── public/              # Public assets (CSS, JS, images)
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── src/
-│   ├── Controller/      # Symfony controllers
-│   ├── Entity/          # Doctrine entities
-│   ├── Form/            # Form types
-│   ├── Repository/      # Database repositories
-│   └── Service/         # Business logic services
-├── templates/           # Twig templates
-├── migrations/          # Database migrations
-├── var/                 # Cache and logs
-├── vendor/              # Composer dependencies
-├── .env                 # Environment variables template
-└── composer.json        # PHP dependencies
+
+
 🎓 Professional Skills Validated
 This project validates the following 8 professional competencies (UC) required for the Web and Mobile Web Application Developer certification:
 
@@ -201,12 +183,14 @@ CP5: Set up a relational database (MySQL)
 CP6: Develop data access components for SQL and NoSQL (MySQL + MongoDB)
 CP7: Develop server-side business components (Symfony services)
 CP8: Document the deployment of a dynamic web or mobile web application
+
 🗓️ Roadmap
 Phase 1: Design & Planning ✅
- Create MCD (Conceptual Data Model)
- Create MLD (Logical Data Model)
- Create MPD (Physical Data Model)
- Homepage wireframe and zoning
+ Create MCD Diagram
+ Create MLD Diagram
+ Create MPD Diagram
+ Homepage and another page wireframe and zoning
+ 
 Phase 2: Development (In Progress)
  Database setup (SQL + NoSQL)
  User authentication system
@@ -219,12 +203,14 @@ Phase 2: Development (In Progress)
  Dark mode implementation
  Contact form and FAQ
  Social media integration
+ 
 Phase 3: Testing & Deployment
  Unit tests
  Integration tests
  User acceptance testing
  Documentation completion
  Deployment preparation
+ 
 Target completion: End of January 2025
 Final submission: End of February 2025
 
@@ -232,13 +218,12 @@ Final submission: End of February 2025
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 📧 Contact
-Project developed by: [Your Name]
+Project developed by: Laura Le Gall
 
-GitHub: @your-username
-Email: your.email@example.com
-LinkedIn: Your LinkedIn Profile
+GitHub: lauraLGWeb
+LinkedIn: https://www.linkedin.com/in/laura-le-gall-web-dev/
 Training Program: Web and Mobile Web Application Developer
-Institution: [Your Training Institution]
+Institution: ECOLE EUROPENNE DU NUMERIQUE 
 Project Type: Final Graduation Project
 
 This project is part of a professional certification training program and demonstrates competencies in full-stack web development, database management, and secure application architecture.
