@@ -12,31 +12,63 @@
         {% endblock %}
     </head>
     <body>
+    
     {% block header %}
+
     <header>
+
         <section class="logoAndBtnContainer">
-            <img src="{{ asset('../assets/images/logo.jpeg') }}" alt="logo">
+            <img src="{{ asset('../assets/images/logo.jpeg') }}" width="120px" alt="logo">
             <button> EN</button>
             <button>MODE</button>
         </section>
+
          <section class="navBarContainer">
             <nav>
-                <ul>
-                    <li>Le Club</li>
-                    <li>Ecole du bad</li>
-                    <li>Tarifs</li>
-                    <li>Actualité</li>
-                    <li>Ils nous soutiennent</li>
-                    <li>Boutique</li>
-                    <li>Contact</li>
-                    <li>Mon compte</li>
-                </ul>
+                <div class="dropdown">
+                        <button class="dropbtn">Le club</button>
+                        <div class="dropdown-content">
+                        <a href="#">Membres du CA</a>
+                        <a href="#">Nos entraineurs</a>
+                        <a href="#">Reglement</a>
+                        <a href="#">Stages</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Ecole du bad</button>
+                        <div class="dropdown-content">
+                        <a href="#">Section 1 </a>
+                        <a href="#">Section 2 </a>
+                        <a href="#">Section 3 </a>
+                        <a href="#">Section 4 </a>
+                        </div>
+                    </div>
+                    <button class="dropbtn" href="{{ path('app_home') }}">Tarifs</button> 
+                    <button class="dropbtn" href="{{ path('app_home') }}">Actualité</button> 
+                    <button class="dropbtn" href="{{ path('app_home') }}">Ils nous soutiennent</button>
+                    <button class="dropbtn" href="{{ path('app_home') }}">Boutique</button>
+                    <button class="dropbtn" href="{{ path('app_home') }}">Mon compte</button>
             </nav>
         </section>
-        <section>
+
+        <section class="WelcomingMsgContainer">
+            <img src="{{ asset('../assets/images/fente.jpg') }}" width="400px" alt="joueur de badminton">
+        </section>
+        <section class = "secondMenuContainer">
+            <button class="btn" href="{{ path('app_home') }}">Voir les créneaux</button>
+            <button class="btn" href="{{ path('app_home') }}">M'inscrire</button>
+            <button class="btn" href="{{ path('app_home') }}">Faire un essai</button>
         </section>
     </header>
+
 {% endblock %}
-        {% block body %}{% endblock %}
+
+
+
+        {% block body %}
+        
+        
+        
+        {% endblock %}
     </body>
 </html>
