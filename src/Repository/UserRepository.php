@@ -38,6 +38,6 @@ class UserRepository extends ServiceEntityRepository
 //            ->setParameter('val', $value)
 //            ->getQuery()
 //            ->getOneOrNullResult()
-//        ;
+//        ;       UY78       
 //    }
 }

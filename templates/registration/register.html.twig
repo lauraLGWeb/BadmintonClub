@@ -59,6 +59,15 @@
 {% endblock %}
 
 
+{% block body %}
+       {{ form_errors(registrationForm) }}
 
-    </body>
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.password)}}
+            
+    {{ form_end(registrationForm) }}
+{% endblock %}
+
+ </body>
 </html>
