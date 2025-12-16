@@ -12,6 +12,31 @@
         {% endblock %}
     </head>
     <body>
+    {% block header %}
+    <header>
+        <section class="logoAndBtnContainer">
+            <img src="{{ asset('../assets/images/logo.jpeg') }}" alt="logo">
+            <button> EN</button>
+            <button>MODE</button>
+        </section>
+         <section class="navBarContainer">
+            <nav>
+                <ul>
+                    <li>Le Club</li>
+                    <li>Ecole du bad</li>
+                    <li>Tarifs</li>
+                    <li>Actualité</li>
+                    <li>Ils nous soutiennent</li>
+                    <li>Boutique</li>
+                    <li>Contact</li>
+                    <li>Mon compte</li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+        </section>
+    </header>
+{% endblock %}
         {% block body %}{% endblock %}
     </body>
 </html>
