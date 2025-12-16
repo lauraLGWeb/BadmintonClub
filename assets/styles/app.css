@@ -25,7 +25,7 @@ body {
   overflow: hidden;
 }
 
-.dropdown .dropbtn, .dropbtn {
+.dropdown .dropbtn, .navBarContainer a {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -36,7 +36,7 @@ body {
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:hover {
+.navbar a:hover, .dropdown:hover .dropbtn, .navBarContainer a :hover {
   background-color: rgb(45, 60, 135);
 }
 
